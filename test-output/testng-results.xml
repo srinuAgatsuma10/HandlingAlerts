@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-16T10:03:05 IST" name="Default suite" finished-at="2025-03-16T10:03:34 IST" duration-ms="28920">
+  <suite started-at="2025-03-16T10:37:55 IST" name="Default suite" finished-at="2025-03-16T10:39:16 IST" duration-ms="81735">
     <groups>
     </groups>
-    <test started-at="2025-03-16T10:03:05 IST" name="Default test" finished-at="2025-03-16T10:03:34 IST" duration-ms="28920">
+    <test started-at="2025-03-16T10:37:55 IST" name="Default test" finished-at="2025-03-16T10:39:16 IST" duration-ms="81735">
       <class name="demoQA.HandlingAlerts">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:demoQA.HandlingAlerts@1d296da]" started-at="2025-03-16T10:03:05 IST" name="setUp" finished-at="2025-03-16T10:03:33 IST" duration-ms="28122" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:demoQA.HandlingAlerts@7c7a06ec]" started-at="2025-03-16T10:37:55 IST" name="setUp" finished-at="2025-03-16T10:39:11 IST" duration-ms="75735" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="normalAlert()[pri:1, instance:demoQA.HandlingAlerts@1d296da]" started-at="2025-03-16T10:03:33 IST" name="normalAlert" finished-at="2025-03-16T10:03:33 IST" duration-ms="204" status="PASS">
+        <test-method signature="timerAlert()[pri:2, instance:demoQA.HandlingAlerts@7c7a06ec]" started-at="2025-03-16T10:39:11 IST" name="timerAlert" finished-at="2025-03-16T10:39:16 IST" duration-ms="5224" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- normalAlert -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:demoQA.HandlingAlerts@1d296da]" started-at="2025-03-16T10:03:33 IST" name="tearDown" finished-at="2025-03-16T10:03:34 IST" duration-ms="525" status="PASS">
+        </test-method> <!-- timerAlert -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:demoQA.HandlingAlerts@7c7a06ec]" started-at="2025-03-16T10:39:16 IST" name="tearDown" finished-at="2025-03-16T10:39:16 IST" duration-ms="691" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
