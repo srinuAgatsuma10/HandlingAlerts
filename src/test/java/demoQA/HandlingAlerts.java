@@ -48,8 +48,20 @@ public class HandlingAlerts {
 	}
 	
 	@Test(priority = 3)
-	public void confirmAlert() {
+	public void confirmAlert()throws Exception {
+		//Click the Button
+		driver.findElement(By.xpath("//button[@id='confirmButton']")).click();
+		// Get the Alert into a variable
+		Alert myAlert = driver.switchTo().alert();
+		System.out.println(myAlert.getText());
 		
+		// Accept/Confirm the Alert
+		myAlert.accept();
+		System.out.println(driver.findElement(By.xpath("//span[@id='confirmResult']")).getText());
+		
+		// Dismiss the Alert
+		myAlert.dismiss();
+		System.out.println(driver.findElement(By.xpath("//span[@id='confirmResult']")).getText());
 	}
 	
 	@Test(priority = 4)

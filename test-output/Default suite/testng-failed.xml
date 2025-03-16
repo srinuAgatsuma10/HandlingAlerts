@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="timerAlert"/>
+          <include name="confirmAlert"/>
         </methods>
       </class> <!-- demoQA.HandlingAlerts -->
     </classes>
