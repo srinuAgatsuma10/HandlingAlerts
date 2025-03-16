@@ -6,9 +6,6 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -66,6 +63,14 @@ public class HandlingAlerts {
 	
 	@Test(priority = 4)
 	public void promptAlert() {
+		//Click the Button
+		driver.findElement(By.xpath("//button[@id='promtButton']")).click();
+		// Get the Alert into a variable
+		Alert myAlert = driver.switchTo().alert();
+		System.out.println(myAlert.getText());
+		myAlert.sendKeys("Luffy is still Joy Boy");
+		myAlert.accept();
+		System.out.println(driver.findElement(By.xpath("//span[@id='promptResult']")).getText());		
 		
 	}
 	
