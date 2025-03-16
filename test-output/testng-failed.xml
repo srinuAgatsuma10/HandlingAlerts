@@ -6,8 +6,10 @@
       <class name="demoQA.HandlingAlerts">
         <methods>
           <include name="tearDown"/>
-          <include name="setUp"/>
           <include name="confirmAlert"/>
+          <include name="setUp"/>
+          <include name="promptAlert"/>
+          <include name="timerAlert"/>
         </methods>
       </class> <!-- demoQA.HandlingAlerts -->
     </classes>
