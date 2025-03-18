@@ -18,11 +18,11 @@ public class HandlingAlerts {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://the-internet.herokuapp.com/javascript_alerts");
-//		driver.manage().window().maximize();
+		driver.manage().window().maximize();
 	}
 
 	// 1) Handling normal alert
-	@Test
+	@Test(priority = 1)
 	public void normalAlerts() throws Exception {
 		driver.findElement(By.xpath("//button[@onclick='jsAlert()']")).click();
 		Thread.sleep(3000);
@@ -30,7 +30,7 @@ public class HandlingAlerts {
 	}
 
 	// 1.1) Accessing name of the Alert
-	@Test
+	@Test(priority = 2)
 	public void accessNameofAlert() throws Exception {
 		driver.findElement(By.xpath("//button[@onclick='jsAlert()']")).click();
 		Thread.sleep(3000);
@@ -40,16 +40,16 @@ public class HandlingAlerts {
 	}
 
 	// 2) Handling Confirmation Alert
-	@Test
+	@Test(priority = 3)
 	public void confirmationAlerts() throws Exception {
 		driver.findElement(By.xpath("//button[@onclick='jsConfirm()']")).click();
 		Thread.sleep(3000);
 		driver.switchTo().alert().accept(); // Accept the Alert
-		driver.switchTo().alert().dismiss(); // Dismiss the Alert
+		//	driver.switchTo().alert().dismiss(); // Dismiss the Alert
 	}
 
 	// 3) Handling prompt Alert
-	@Test
+	@Test(priority = 4)
 	public void promptAlerts() {
 		driver.findElement(By.xpath("//button[@onclick='jsPrompt()']")).click();
 		Alert myal = driver.switchTo().alert();
