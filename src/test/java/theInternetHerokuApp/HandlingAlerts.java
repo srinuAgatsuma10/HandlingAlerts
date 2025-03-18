@@ -11,7 +11,7 @@ import org.testng.annotations.*;
 public class HandlingAlerts {
 
 	WebDriver driver;
-	
+
 	@BeforeClass
 	public void setUp() {
 		driver = new ChromeDriver();
@@ -20,37 +20,35 @@ public class HandlingAlerts {
 		driver.get("https://the-internet.herokuapp.com/javascript_alerts");
 //		driver.manage().window().maximize();
 	}
-	
-	//1) Handling normal alert
+
+	// 1) Handling normal alert
 	@Test
-	public void normalAlerts()throws Exception {
+	public void normalAlerts() throws Exception {
 		driver.findElement(By.xpath("//button[@onclick='jsAlert()']")).click();
 		Thread.sleep(3000);
 		driver.switchTo().alert().accept();
 	}
-	
-	
-	//1.1) Accessing name of the Alert
+
+	// 1.1) Accessing name of the Alert
 	@Test
-	public void accessNameofAlert() throws Exception{
+	public void accessNameofAlert() throws Exception {
 		driver.findElement(By.xpath("//button[@onclick='jsAlert()']")).click();
 		Thread.sleep(3000);
 		Alert myal = driver.switchTo().alert();
 		System.out.println(myal.getText());
 		myal.accept();
 	}
-	
-	//2) Handling Confirmation Alert
+
+	// 2) Handling Confirmation Alert
 	@Test
-	public void confirmationAlerts() throws Exception{
+	public void confirmationAlerts() throws Exception {
 		driver.findElement(By.xpath("//button[@onclick='jsConfirm()']")).click();
 		Thread.sleep(3000);
 		driver.switchTo().alert().accept(); // Accept the Alert
 		driver.switchTo().alert().dismiss(); // Dismiss the Alert
 	}
-	
-	
-	//3) Handling prompt Alert
+
+	// 3) Handling prompt Alert
 	@Test
 	public void promptAlerts() {
 		driver.findElement(By.xpath("//button[@onclick='jsPrompt()']")).click();
@@ -59,9 +57,9 @@ public class HandlingAlerts {
 		System.out.println(myal.getText());
 		myal.accept();
 	}
-	
+
 	@AfterClass
 	public void tearDown() {
-		
+		driver.quit();
 	}
 }

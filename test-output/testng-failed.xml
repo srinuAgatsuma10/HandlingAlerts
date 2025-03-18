@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="demoQA.HandlingAlerts">
+      <class name="theInternetHerokuApp.HandlingAlerts">
         <methods>
-          <include name="tearDown"/>
-          <include name="confirmAlert"/>
+          <include name="confirmationAlerts"/>
           <include name="setUp"/>
-          <include name="promptAlert"/>
-          <include name="timerAlert"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- demoQA.HandlingAlerts -->
+      </class> <!-- theInternetHerokuApp.HandlingAlerts -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
