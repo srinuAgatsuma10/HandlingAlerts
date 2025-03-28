@@ -34,7 +34,18 @@ public class HandlingAlerts {
 
 	@Test(priority = 2)
 	public void confirmationAlert() {
-
+		WebElement confirmAlert = driver.findElement(By.xpath("//button[@id='confirmBtn']"));
+		confirmAlert.click();
+		Alert sa = driver.switchTo().alert();
+		System.out.println(sa.getText());
+		// Accept the Alert
+		sa.accept();
+		String result = driver.findElement(By.xpath("//p[@id='demo']")).getText();
+		System.out.println(result);
+		
+		// Cancel the Alert
+//		sa.dismiss();
+//		System.out.println(result);
 	}
 
 	@Test(priority = 3)
