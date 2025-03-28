@@ -2,7 +2,10 @@ package automationBlogSpot;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -22,7 +25,11 @@ public class HandlingAlerts {
 
 	@Test(priority = 1)
 	public void sampleAlert() {
-
+		WebElement sampleAlert = driver.findElement(By.xpath("//button[@id='alertBtn']"));
+		sampleAlert.click();
+		Alert sa = driver.switchTo().alert();
+		System.out.println(sa.getText());
+		sa.accept();
 	}
 
 	@Test(priority = 2)
